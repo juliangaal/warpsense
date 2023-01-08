@@ -1,0 +1,43 @@
+# Parameters of Lidar Sensor
+lidar:
+  channels: 128                           # number of horizontal scan lines
+  vfov: 45.0                              # vertical field of view of scanner
+  hresolution: 1024                       # horizontal resolution used in bagfile/sensor
+
+# Featsense Parameters
+floam:
+  pcl_topic: "/ouster/points"             # which lidar topic to listen to
+  min_distance: 2.0                       # minimum distance of points used for registration
+  max_distance: 50.0                      # maximum distance of points used for registration. May need to be reduced in highly irregular environment, e.g. Dreikaiserstuhl
+  edge_resolution: 0.4                    # subsampling resolution of edge map
+  edge_threshold: 2.5                     # curvature threshold for edge features
+  surf_resolution: 0.8                    # subsampling resolution of surface map
+  surf_threshold: 0.001                   # curvature threshold for surface features
+  optimization_steps: 3                   # number of optimization steps (F-LOAM default: 3). Generally 3 is enough, though some datasets may necessitate 5
+  enrich: 4                               # how many past scans are part of local map for post-registration
+  vgicp_fitness_score: 6.0                # vgicp fitness score threshold.
+
+# Registration Parameters (Warpsense)
+registration:
+  max_iterations: 200                     # maximum number of optimization iterations allowed
+  it_weight_gradient: 0.1                 # damping parameter for optimization
+  lidar_topic: "/ouster/points"           # lidar topic to listen to
+  imu_topic: "/ouster/imu"                # IMU topic to listen to
+  link: "base_link"                       # link used to publish transform, e.g. <link> -> map
+  epsilon: 0.03                           # optimization is stopped after changes < epsilon since last iteration
+
+# Map Parameters (Warpsense/Featsense)
+map:
+  dir: "/home/julian/dev"                 # directory to save map in
+  comment: "test"                         # additional comment that will determine final filename
+  max_distance: 1.0                       # maximum truncation distance (m)
+  update_distance: 0.25                   # TSDF update frequency dependent on distance travelled (m)
+  resolution: 64                          # Size of one grid cell in the discretised map (in mm (!) per cell)
+  # Number of grid cells in the map for every dimension (in m)
+  size:
+    x: 40
+    y: 40
+    z: 25
+
+  shift: 10                               # After which travelled distance shift is performed. Paradoxically, more frequent shifts are better for overall mapping performance (in my experience)
+  max_weight: 10.0                        # Maximum weight for one TSDF cell. This variable ensures that later changes can still have an influence to the map

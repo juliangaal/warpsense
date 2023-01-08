@@ -1,0 +1,3 @@
+<launch>
+    <node name="lidar_processing" type="lidar_processing_node" pkg="warpsense" output="screen"/>
+</launch>

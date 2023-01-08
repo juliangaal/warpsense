@@ -1,0 +1,21 @@
+map:
+  # directory to save map in
+  dir: "/home/julian/dev"
+
+  # if filename is specified, dir is ignored
+  filename: "test.h5"
+
+  # Truncation distance for the TSDF values (in m)
+  max_distance: 4
+
+  # Size of one grid cell in the discretised map (in m per cell)
+  resolution: 4000 #0.1 #0.03
+
+  # Number of grid cells in the map for every dimension (in m)
+  size:
+    x: 20
+    y: 20
+    z: 20
+
+  # Maximum weight for one TSDF cell. This variable ensures that later changes can still have an influence to the map
+  max_weight: 10

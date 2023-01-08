@@ -1,0 +1,5 @@
+<launch>
+    <node name="pcd2tsdf" type="pcd2tsdf_node" pkg="warpsense" output="screen" clear_params="true">
+        <rosparam command="load" file="$(find warpsense)/test/pcd2tsdf.yaml"/>
+    </node>
+</launch>

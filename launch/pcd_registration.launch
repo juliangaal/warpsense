@@ -1,0 +1,5 @@
+<launch>
+    <node name="pcd_registration" type="pcd_registration_node" pkg="warpsense" output="screen" clear_params="true">
+        <rosparam command="load" file="$(find warpsense)/test/pcd_registration.yaml"/>
+    </node>
+</launch>

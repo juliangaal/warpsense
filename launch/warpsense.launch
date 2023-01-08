@@ -1,0 +1,5 @@
+<launch>
+    <node name="warpsense_gpu" type="warpsense" pkg="warpsense" output="screen" clear_params="true">
+        <rosparam command="load" file="$(find warpsense)/params/params.yaml"/>
+    </node>
+</launch>

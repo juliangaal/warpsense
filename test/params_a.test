@@ -1,0 +1,4 @@
+<launch>
+    <rosparam command="load" file="$(find warpsense)/test/params_a.yaml"/>
+    <test test-name="test_params_a" pkg="warpsense" type="test_params_a"/>
+</launch>

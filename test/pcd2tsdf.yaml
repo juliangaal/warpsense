@@ -1,0 +1,47 @@
+lidar:
+  channels: 128
+  vfov: 45.0
+  hresolution: 1024
+  frequency: 10
+
+floam:
+  pcl_topic: "/os_cloud_node/points"
+  min_distance: 2.0
+  max_distance: 50.0
+  map_resolution: 0.4
+
+registration:
+  max_iterations: 200
+  it_weight_gradient: 0.1
+  lidar_topic: "/os_cloud_node/points"
+  imu_topic: "/os_cloud_node/imu"
+  link: "base_link"
+  epsilon: 0.03
+
+map:
+  # directory to save map in
+  dir: "/home/julian/dev"
+
+  comment: "eval_buffered_floam_noloose_liosam_no_sub"
+
+  # Truncation distance for the TSDF values (in m)
+  max_distance: 1.0
+
+  # when to update tsdf
+  update_distance: 0.25
+
+  # Size of one grid cell in the discretised map (in m per cell)
+  resolution: 64 #0.1 #0.03
+
+  # Number of grid cells in the map for every dimension (in m)
+  size:
+    x: 20
+    y: 20
+    z: 15
+
+  shift: 10
+
+  # Maximum weight for one TSDF cell. This variable ensures that later changes can still have an influence to the map
+  max_weight: 10.0
+
+  refinement: false

@@ -1,0 +1,5 @@
+<launch>
+    <node name="featsense" type="featsense" pkg="warpsense" output="screen">
+        <rosparam command="load" file="$(find warpsense)/params/params.yaml"/>
+    </node>
+</launch>

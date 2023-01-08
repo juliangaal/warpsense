@@ -1,0 +1,3 @@
+<launch>
+    <node name="mapping" type="mapping_node" pkg="warpsense" output="screen"/>
+</launch>

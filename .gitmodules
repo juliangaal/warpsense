@@ -1,0 +1,21 @@
+[submodule "ext/HighFive"]
+	path = ext/HighFive
+	url = git@github.com:BlueBrain/HighFive.git
+[submodule "ext/LVR2"]
+	path = ext/LVR2
+	url = git@gitlab.informatik.uni-osnabrueck.de:Las_Vegas_Reconstruction/Develop.git
+[submodule "ext/cuda-samples"]
+	path = ext/cuda-samples
+	url = git@github.com:NVIDIA/cuda-samples.git
+[submodule "doc/doxygen"]
+	path = docs/doxygen-awesome-css
+	url = git@github.com:jothepro/doxygen-awesome-css.git
+[submodule "ext/ikd-Tree"]
+	path = ext/ikd-Tree
+	url = git@github.com:hku-mars/ikd-Tree.git
+[submodule "ext/nanoflann"]
+	path = ext/nanoflann
+	url = https://github.com/jlblancoc/nanoflann.git
+[submodule "docs/doxygen-awesome-css"]
+	path = docs/doxygen-awesome-css
+	url = git@github.com:jothepro/doxygen-awesome-css.git

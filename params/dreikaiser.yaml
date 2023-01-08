@@ -1,0 +1,37 @@
+lidar:
+  channels: 128
+  vfov: 45.0
+  hresolution: 1024
+
+floam:
+  pcl_topic: "/ouster/points"
+  min_distance: 2.0
+  max_distance: 8.0
+  edge_resolution: 0.4
+  edge_threshold: 2.5
+  surf_resolution: 0.4
+  surf_threshold: 0.001
+  optimization_steps: 5
+  enrich: 6
+  vgicp_fitness_score: 2.0
+
+registration:
+  max_iterations: 200
+  it_weight_gradient: 0.1
+  lidar_topic: "/os_cloud_node/points"
+  imu_topic: "/os_cloud_node/imu"
+  link: "base_link"
+  epsilon: 0.03
+
+map:
+  dir: "/home/julian/dev"
+  comment: "dreikaiser"
+  max_distance: 1.0
+  update_distance: 0.25
+  resolution: 64 #0.1 #0.03
+  size:
+    x: 50
+    y: 50
+    z: 25
+  shift: 10
+  max_weight: 10.0

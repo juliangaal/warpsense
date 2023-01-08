@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find warpsense)/launch/imu_filter.launch"/>
+    <node name="warpsense_cpu" type="warpsense_cpu" pkg="warpsense" output="screen" clear_params="true">
+        <rosparam command="load" file="$(find warpsense)/params/params.yaml"/>
+    </node>
+</launch>

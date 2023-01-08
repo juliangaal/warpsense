@@ -1,0 +1,29 @@
+registration:
+  max_iterations: 300
+  it_weight_gradient: 1
+  lidar_topic: "/os1_cloud_node/pointsee"
+  imu_topic: "/os1_cloud_node/imuee"
+  link: "os1_sensoree"
+  epsilon: 0.05
+
+map:
+  # directory to save map in
+  dir: "/home/julian/dev"
+
+  # if filename is specified, dir is ignored
+  filename: "/tmp/test_params.h5"
+
+  # Truncation distance for the TSDF values (in m)
+  max_distance: 3
+
+  # Size of one grid cell in the discretised map (in m per cell)
+  resolution: 1000 #0.1 #0.03
+
+  # Number of grid cells in the map for every dimension (in m)
+  size:
+    x: 20
+    y: 20
+    z: 20
+
+  # Maximum weight for one TSDF cell. This variable ensures that later changes can still have an influence to the map
+  max_weight: 10

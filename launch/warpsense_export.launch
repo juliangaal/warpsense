@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find warpsense)/launch/warpsense_gpu.launch"/>
+    <node name="pcl_writer" type="pcl_writer" pkg="warpsense" output="screen" clear_params="true">
+        <rosparam command="load" file="$(find warpsense)/params/pcl_writer.yaml"/>
+    </node>
+</launch>

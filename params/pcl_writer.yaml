@@ -1,0 +1,6 @@
+dir: "/home/julian/dev/patrick/uzh_tracking_area"
+topic: "/gicp_map"
+ply: true
+pcd: true
+
+

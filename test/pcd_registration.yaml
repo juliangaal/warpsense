@@ -1,0 +1,30 @@
+registration:
+  max_iterations: 200
+  it_weight_gradient: 0.1
+  lidar_topic: "/from_trenz_bridge/velodyne/points"
+  imu_topic: "/imu/data"
+  link: "base_link"
+  epsilon: 0.03
+
+map:
+  # directory to save map in
+  dir: "/tmp"
+
+  comment: "pcd-registration-test"
+
+  # Truncation distance for the TSDF values (in m)
+  max_distance: 0.6
+
+  # Size of one grid cell in the discretised map (in m per cell)
+  resolution: 64 #0.1 #0.03
+
+  # Number of grid cells in the map for every dimension (in m)
+  size:
+    x: 20
+    y: 20
+    z: 15
+
+  # Maximum weight for one TSDF cell. This variable ensures that later changes can still have an influence to the map
+  max_weight: 10.0
+
+  refinement: true

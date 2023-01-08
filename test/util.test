@@ -1,0 +1,3 @@
+<launch>
+    <test test-name="test_util" pkg="warpsense" type="test_util"/>
+</launch>

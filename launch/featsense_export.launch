@@ -1,0 +1,8 @@
+<launch>
+    <node name="featsense" type="featsense" pkg="warpsense" output="screen">
+        <rosparam command="load" file="$(find warpsense)/params/params.yaml"/>
+    </node>
+    <node name="pcl_writer" type="pcl_writer" pkg="warpsense" output="screen" clear_params="true">
+        <rosparam command="load" file="$(find warpsense)/params/pcl_writer.yaml"/>
+    </node>
+</launch>
