@@ -1,6 +1,20 @@
+
 # Warpsense
 
-![](misc/chemnitz.png)
+```
+@misc{gaal2023featsense,
+      title={FeatSense -- A Feature-based Registration Algorithm with GPU-accelerated TSDF-Mapping Backend for NVIDIA Jetson Boards}, 
+      author={Julian Gaal and Thomas Wiemann and Alexander Mock and Mario Porrmann},
+      year={2023},
+      eprint={2310.05766},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO}
+}
+```
+
+Please cite this work published on [arxiv](https://arxiv.org/abs/2310.05766) and accepted by [IRC 2023](https://www.ieee-irc.org) if you found it useful.
+
+## Overview
 
 This repo contains `warpsense` and `fastsense`, both SLAM approaches *highly tailored to the OS1-128*. 
 
@@ -17,6 +31,8 @@ This repo contains `warpsense` and `fastsense`, both SLAM approaches *highly tai
 * Usable on embedded ARM devices: reduction of ROS networking overhead
 
 Both approaches are evaluated in the [evaluation chapter](#evaluation)
+
+![](misc/chemnitz.png)
 
 ## Table of contents
 1. [Folder Structure](#structure)
@@ -113,7 +129,7 @@ Tested with ROS Noetic on Ubuntu 20.04 and AGX-Xavier on Ubuntu 18.04.
 
 Use `catkin_make docs`
 
-## Parameterization Instructions <a name="parameterization-instructions"></a>
+## Parameterization Instructions <a name="paramerization-instructions"></a>
 
 For featsense and warpsense, please refer to `params/params.yaml`, where each parameter is explained.
 
