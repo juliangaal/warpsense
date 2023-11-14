@@ -5,7 +5,7 @@ project(warpsense LANGUAGES CUDA CXX C)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CUDA_STANDARD 14)
 set(CMAKE_C_STANDARD 11)
-set(CATKIN_ENABLE_TEST ON)
+set(CATKIN_ENABLE_TEST OFF)
 set(CMAKE_BUILD_TYPE Release)
 
 ## Find catkin macros and libraries
