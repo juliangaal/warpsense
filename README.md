@@ -73,7 +73,9 @@ Tested with ROS Noetic on Ubuntu 20.04 and AGX-Xavier on Ubuntu 18.04.
 * clone `fast_vgicp` into ROS workspace for (post-registration)
   
   ```
-  git clone https://github.com/SMRT-AIST/fast_gicp --recursive
+  git clone https://github.com/SMRT-AIST/fast_gicp && cd fast_gicp
+  git checkout ee1fdbae7dd86284b52a06141358c89982d67850 # last confirmed working commit
+  git submodule update --init --recursive
   ```
 * clone warpsense
   
